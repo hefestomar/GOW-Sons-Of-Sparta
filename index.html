@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>God of War: Sons of Sparta — Guía de ruta completa (spoilers)</title>
+<meta name="description" content="Ruta paso a paso de God of War: Sons of Sparta: orden de los Dones del Olimpo, porcentaje de avance por capítulo, tiempos estimados y contenido opcional. Guía con spoilers en español.">
+
+<!-- ============================================================
+     TARJETA PARA WHATSAPP / REDES
+     Cambia las dos URLs de abajo por las tuyas después de subir:
+     https://TU-USUARIO.github.io/TU-REPO/
+     WhatsApp exige URL ABSOLUTA (https://...), no rutas relativas.
+     ============================================================ -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Guías de Laconia">
+<meta property="og:title" content="God of War: Sons of Sparta — Guía de ruta completa">
+<meta property="og:description" content="Los 12 capítulos, los 6 Dones del Olimpo en orden, % de avance y tiempos. Con spoilers.">
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/">
+<meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="God of War: Sons of Sparta — guía de ruta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="God of War: Sons of Sparta — Guía de ruta completa">
+<meta name="twitter:description" content="Los 12 capítulos, los 6 Dones del Olimpo en orden, % de avance y tiempos.">
+<meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPO/og-image.png">
+<meta name="theme-color" content="#14100E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --piedra:#14100E;
+  --piedra-2:#1D1815;
+  --piedra-3:#272019;
+  --terracota:#6E2B1B;
+  --bronce:#C9A227;
+  --bronce-claro:#E8C963;
+  --marmol:#EDE4D3;
+  --marmol-tenue:#A79B88;
+  --orbe-rojo:#E0374A;
+  --orbe-azul:#3FA9F5;
+  --orbe-amarillo:#F5C542;
+  --orbe-verde:#4CC26B;
+  --linea:#3A2F26;
+  --medida:min(1080px, 92vw);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--piedra);
+  color:var(--marmol);
+  font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--bronce-claro);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--marmol)}
+:focus-visible{outline:2px solid var(--bronce-claro);outline-offset:3px;border-radius:2px}
+
+/* ---------- lienzo de orbes ---------- */
+#orbes{
+  position:fixed;inset:0;width:100%;height:100%;
+  z-index:0;pointer-events:none;
+}
+.capa{position:relative;z-index:1}
+
+/* ---------- barra de avance ---------- */
+.barra{
+  position:fixed;top:0;left:0;right:0;height:3px;
+  background:rgba(58,47,38,.6);z-index:50;
+}
+.barra i{
+  display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--terracota),var(--bronce),var(--bronce-claro));
+  transition:width .12s linear;
+}
+
+/* ---------- portada ---------- */
+header.portada{
+  min-height:88vh;display:flex;flex-direction:column;justify-content:center;
+  padding:96px 0 64px;position:relative;
+}
+.contenedor{width:var(--medida);margin:0 auto}
+
+.sello{
+  font-family:'Silkscreen',monospace;font-size:11px;letter-spacing:.14em;
+  color:var(--bronce);margin:0 0 26px;
+}
+h1{
+  font-family:'Silkscreen',monospace;font-weight:700;
+  font-size:clamp(30px,7.2vw,74px);
+  line-height:1.06;letter-spacing:-.01em;margin:0 0 6px;
+  color:var(--marmol);
+  text-shadow:0 0 42px rgba(201,162,39,.22);
+}
+h1 span{display:block;color:var(--bronce)}
+.bajada{
+  font-size:clamp(17px,2.4vw,21px);color:var(--marmol-tenue);
+  max-width:52ch;margin:26px 0 0;
+}
+.aviso{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:30px;padding:9px 16px 9px 12px;
+  border:1px solid var(--terracota);border-radius:2px;
+  background:rgba(110,43,27,.16);
+  font-size:14px;color:#F0BFB2;
+}
+.aviso b{color:#FF9E86;font-weight:600}
+
+.datos{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--linea);border:1px solid var(--linea);
+  margin-top:52px;
+}
+.datos div{background:var(--piedra-2);padding:18px 20px}
+.datos dt{font-size:12.5px;color:var(--marmol-tenue);margin:0 0 4px}
+.datos dd{margin:0;font-family:'Silkscreen',monospace;font-size:19px;color:var(--bronce-claro)}
+
+/* ---------- secciones ---------- */
+section{padding:76px 0;border-top:1px solid var(--linea);background:rgba(20,16,14,.86)}
+h2{
+  font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-.02em;
+  margin:0 0 10px;color:var(--marmol);
+}
+h2::before{
+  content:"";display:block;width:44px;height:3px;background:var(--bronce);
+  margin-bottom:20px;
+}
+.intro{color:var(--marmol-tenue);max-width:68ch;margin:0 0 40px}
+h3{font-size:20px;font-weight:700;margin:44px 0 12px}
+
+/* ---------- dones ---------- */
+.dones{display:grid;gap:14px}
+.don{
+  display:grid;grid-template-columns:56px 1fr;gap:20px;
+  background:var(--piedra-2);border:1px solid var(--linea);
+  border-left:3px solid var(--dedo,var(--bronce));
+  padding:22px 24px;
+}
+.don .num{
+  font-family:'Silkscreen',monospace;font-size:26px;
+  color:var(--dedo,var(--bronce));line-height:1;padding-top:2px;
+}
+.don h4{margin:0 0 3px;font-size:19px;font-weight:700}
+.don .en{font-size:13.5px;color:var(--marmol-tenue);margin:0 0 14px}
+.don ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:15px}
+.don ul b{color:var(--marmol-tenue);font-weight:500;display:inline-block;min-width:112px}
+.don .pct{
+  display:inline-block;margin-top:14px;padding:3px 10px;
+  font-family:'Silkscreen',monospace;font-size:12px;
+  background:var(--dedo,var(--bronce));color:#14100E;
+}
+
+/* ---------- capítulos ---------- */
+.cap{
+  border:1px solid var(--linea);background:var(--piedra-2);
+  margin-bottom:12px;
+}
+.cap > summary{
+  list-style:none;cursor:pointer;padding:20px 22px;
+  display:grid;grid-template-columns:44px 1fr auto;gap:18px;align-items:center;
+}
+.cap > summary::-webkit-details-marker{display:none}
+.cap > summary:hover{background:var(--piedra-3)}
+.cap .idx{font-family:'Silkscreen',monospace;font-size:17px;color:var(--bronce)}
+.cap .tit{font-weight:600;font-size:17.5px;line-height:1.3}
+.cap .tit small{display:block;font-weight:400;font-size:13px;color:var(--marmol-tenue);margin-top:2px}
+.cap .meta{text-align:right;font-family:'Silkscreen',monospace;font-size:12px;color:var(--bronce-claro);white-space:nowrap}
+.cap .meta em{display:block;font-style:normal;color:var(--marmol-tenue);margin-top:4px}
+.cap .cuerpo{padding:4px 22px 24px 84px;border-top:1px solid var(--linea);margin-top:0}
+.cap .cuerpo p{margin:16px 0 0}
+.cap .cuerpo ul{margin:14px 0 0;padding-left:20px}
+.cap .cuerpo li{margin-bottom:7px}
+.cap[open] > summary{background:var(--piedra-3)}
+.etiqueta{
+  display:inline-block;font-size:12px;padding:2px 8px;margin:2px 6px 2px 0;
+  border:1px solid var(--linea);color:var(--marmol-tenue);
+}
+.etiqueta.don-e{border-color:var(--bronce);color:var(--bronce-claro)}
+.etiqueta.jefe{border-color:var(--orbe-rojo);color:#FF8A96}
+
+/* checkbox de progreso */
+.marca{
+  display:flex;align-items:center;gap:9px;margin-top:20px;
+  font-size:14px;color:var(--marmol-tenue);cursor:pointer;width:max-content;
+}
+.marca input{width:17px;height:17px;accent-color:var(--bronce);cursor:pointer}
+
+.tablero{
+  position:sticky;top:3px;z-index:20;
+  background:var(--piedra-3);border:1px solid var(--linea);
+  padding:14px 18px;margin-bottom:26px;
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.tablero .cifra{font-family:'Silkscreen',monospace;font-size:22px;color:var(--bronce-claro)}
+.tablero .riel{flex:1;min-width:130px;height:8px;background:var(--piedra);border:1px solid var(--linea)}
+.tablero .riel i{display:block;height:100%;width:0;background:var(--bronce);transition:width .25s ease}
+.tablero button{
+  font-family:inherit;font-size:13px;background:none;color:var(--marmol-tenue);
+  border:1px solid var(--linea);padding:6px 12px;cursor:pointer;
+}
+.tablero button:hover{color:var(--marmol);border-color:var(--marmol-tenue)}
+
+/* ---------- tablas ---------- */
+.tabla-envoltura{overflow-x:auto;border:1px solid var(--linea)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--linea)}
+th{background:var(--piedra-3);font-weight:600;font-size:13.5px;color:var(--marmol-tenue)}
+tbody tr:last-child td{border-bottom:none}
+td.n{font-family:'Silkscreen',monospace;font-size:13px;color:var(--bronce-claro)}
+
+/* ---------- listas de contenido opcional ---------- */
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.ficha{background:var(--piedra-2);border:1px solid var(--linea);padding:20px 22px}
+.ficha h4{margin:0 0 8px;font-size:17px}
+.ficha p{margin:0;font-size:14.5px;color:var(--marmol-tenue)}
+
+.nota{
+  border-left:3px solid var(--orbe-azul);background:rgba(63,169,245,.07);
+  padding:16px 20px;font-size:15px;color:#BFD9EE;margin:26px 0 0;
+}
+
+footer{padding:60px 0 80px;border-top:1px solid var(--linea);background:var(--piedra);position:relative;z-index:1}
+footer p{font-size:14px;color:var(--marmol-tenue);max-width:70ch}
+footer ul{padding-left:18px;font-size:14.5px}
+footer li{margin-bottom:6px}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .cap > summary{grid-template-columns:32px 1fr;gap:12px;padding:16px}
+  .cap .meta{grid-column:2;text-align:left;margin-top:6px}
+  .cap .cuerpo{padding:4px 16px 20px}
+  .don{grid-template-columns:1fr;gap:8px}
+  .don ul b{display:block;min-width:0}
+  section{padding:56px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+  #orbes{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="barra" aria-hidden="true"><i id="barraAvance"></i></div>
+<canvas id="orbes" aria-hidden="true"></canvas>
+
+<div class="capa">
+
+<header class="portada">
+  <div class="contenedor">
+    <p class="sello">LACONIA · 21 REGIONES · PS5</p>
+    <h1>God of War<span>Sons of Sparta</span></h1>
+    <p class="bajada">Ruta completa de los 12 capítulos: dónde y en qué orden caen los seis Dones del Olimpo, cuánto avanza cada tramo y cuánto tiempo te va a llevar.</p>
+
+    <p class="aviso"><b>Spoilers</b> · Esta guía revela jefes, regiones y el desenlace.</p>
+
+    <dl class="datos">
+      <div><dt>Historia principal</dt><dd>11–13 h</dd></div>
+      <div><dt>Todo al 100 %</dt><dd>20–22 h</dd></div>
+      <div><dt>Capítulos</dt><dd>12</dd></div>
+      <div><dt>Dones del Olimpo</dt><dd>6</dd></div>
+      <div><dt>Coleccionables</dt><dd>594</dd></div>
+      <div><dt>Nada perdible</dt><dd>0</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ============ ANTES DE EMPEZAR ============ -->
+<section id="antes">
+  <div class="contenedor">
+    <h2>Antes de empezar</h2>
+    <p class="intro">Cuatro cosas que cambian cómo juegas todo lo demás.</p>
+
+    <div class="rejilla">
+      <div class="ficha">
+        <h4>Nada es perdible</h4>
+        <p>Los 594 coleccionables siguen disponibles después de los créditos. Juega la historia sin preocuparte y limpia el mapa al final.</p>
+      </div>
+      <div class="ficha">
+        <h4>Los créditos no son el 100 %</h4>
+        <p>Terminar la historia deja el contador del juego alrededor del 35–40 %. El resto es exploración con habilidades tardías.</p>
+      </div>
+      <div class="ficha">
+        <h4>Dificultad recomendada</h4>
+        <p>Cadete da un reto justo. Chico es modo historia. Espartano no aporta nada obligatorio y alarga los jefes.</p>
+      </div>
+      <div class="ficha">
+        <h4>Globos Bermellón primero</h4>
+        <p>Cada región tiene uno. Actívalo con orbes y te revela olivos sagrados y monumentos en el mapa. Es la diferencia entre limpiar una zona en 15 minutos o en una hora.</p>
+      </div>
+    </div>
+
+    <div class="nota">
+      Las tres barras crecen por separado: <strong>Aceitunas de Dioniso</strong> suben la vida, <strong>Aceitunas de Hestia</strong> la magia y <strong>Aceitunas de Nike</strong> el espíritu. Cada olivo sagrado es una arena: interactúas, aguantas tres o cuatro oleadas y te llevas la aceituna. Entra con las tres barras llenas.
+    </div>
+  </div>
+</section>
+
+<!-- ============ DONES DEL OLIMPO ============ -->
+<section id="dones">
+  <div class="contenedor">
+    <h2>Los Dones del Olimpo, en orden</h2>
+    <p class="intro">Son la llave del diseño metroidvania: cada don abre obstáculos que quedaron atrás. Todos llegan por historia, en un templo, y ninguno se puede adelantar. El porcentaje marca en qué punto de la campaña los tendrás.</p>
+
+    <div class="dones">
+
+      <article class="don" style="--dedo:var(--orbe-amarillo)">
+        <div class="num">01</div>
+        <div>
+          <h4>Honda Solar</h4>
+          <p class="en">Solar Sling · Apolo</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Apolo, Bosques de Laconia</li>
+            <li><b>Cuándo</b> Capítulo 2, buscando las herramientas del escultor</li>
+            <li><b>Abre</b> Interruptores solares a distancia, varillas de techo, objetivos fuera de alcance</li>
+            <li><b>Mejora</b> Tres Coronas Doradas devueltas al templo</li>
+          </ul>
+          <span class="pct">≈ 15 % de la historia</span>
+        </div>
+      </article>
+
+      <article class="don" style="--dedo:var(--orbe-rojo)">
+        <div class="num">02</div>
+        <div>
+          <h4>Llama Perenne</h4>
+          <p class="en">Evergreen Flame · Hestia</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Hestia, dentro de la Gran Cisterna (bajo Esparta)</li>
+            <li><b>Cuándo</b> Capítulo 3, después de derrotar a Ioke</li>
+            <li><b>Abre</b> Barreras de espinos y zarzas de todo el mapa</li>
+            <li><b>Cómo llegar</b> Baja por el pozo del elevador hasta el fondo de la Cisterna</li>
+          </ul>
+          <span class="pct">≈ 24 % de la historia</span>
+        </div>
+      </article>
+
+      <article class="don" style="--dedo:var(--orbe-verde)">
+        <div class="num">03</div>
+        <div>
+          <h4>Sandalias de la Victoria</h4>
+          <p class="en">Victory Sandals · Nike</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Nike, junto al Santuario</li>
+            <li><b>Cuándo</b> Capítulo 4. El templo está cerrado a la ida; se abre al salir del Santuario</li>
+            <li><b>Abre</b> Impulsos de velocidad y saltos largos</li>
+            <li><b>Mejora</b> Tres Altares de Nike repartidos por Laconia. El segundo (Paso de los Monumentos) es el que rompe las barreras del mundo</li>
+          </ul>
+          <span class="pct">≈ 31 % de la historia</span>
+        </div>
+      </article>
+
+      <article class="don" style="--dedo:var(--orbe-verde)">
+        <div class="num">04</div>
+        <div>
+          <h4>Olpe del Bienestar</h4>
+          <p class="en">Olpe of Wellness · Dioniso</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Dioniso, al final del recorrido por el río Eurotas</li>
+            <li><b>Cuándo</b> Capítulo 5</li>
+            <li><b>Abre</b> Frasco de curación usable en cualquier momento (arriba en la cruceta)</li>
+            <li><b>Ojo</b> No se rellena en la hoguera. Solo se llena recogiendo orbes verdes con la vida al tope</li>
+          </ul>
+          <span class="pct">≈ 40 % de la historia</span>
+        </div>
+      </article>
+
+      <article class="don" style="--dedo:var(--orbe-azul)">
+        <div class="num">05</div>
+        <div>
+          <h4>Hoja Lunar</h4>
+          <p class="en">Lunar Blade · Artemisa</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Artemisa, justo antes del Paso de los Monumentos</li>
+            <li><b>Cuándo</b> Capítulo 6</li>
+            <li><b>Abre</b> Desplaza columnas, estatuas y bloques de mármol. Es la herramienta de puzzle más usada del juego</li>
+            <li><b>Detalle</b> Al salir del templo hay un punto de viaje rápido y un orbe rompible con la propia hoja</li>
+          </ul>
+          <span class="pct">≈ 49 % de la historia</span>
+        </div>
+      </article>
+
+      <article class="don" style="--dedo:var(--orbe-amarillo)">
+        <div class="num">06</div>
+        <div>
+          <h4>Guadaña de la Cosecha</h4>
+          <p class="en">Harvest Glaive · Deméter</p>
+          <ul>
+            <li><b>Dónde</b> Templo de Deméter, a la entrada del Pantano Velado</li>
+            <li><b>Cuándo</b> Capítulo 8</li>
+            <li><b>Abre</b> Raíces, enredaderas azules y tirolesas bloqueadas</li>
+            <li><b>Truco</b> Atraviesa muros al regresar: tírala en diagonal y engancha objetivos que no ves</li>
+          </ul>
+          <span class="pct">≈ 65 % de la historia</span>
+        </div>
+      </article>
+
+    </div>
+
+    <h3>El Busto de Licurgo</h3>
+    <p>Aparte de los dones existe una segunda vía de progresión: el busto que Konstantinos te entrega en el capítulo 1. Tiene ocho poderes; siete llegan solos en escenas de la historia y el octavo está en una sala opcional de la Isla de Eea.</p>
+
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Poder</th><th>Cuándo</th><th>Para qué sirve</th></tr></thead>
+        <tbody>
+          <tr><td class="n">Historeo</td><td>Cap. 1, casa del escultor</td><td>Registra regiones, enemigos y peligros en el archivo</td></tr>
+          <tr><td class="n">Skopos</td><td>Cap. 1, altar junto a la primera hoguera</td><td>Lanza un haz por los ojos y activa receptáculos ópticos</td></tr>
+          <tr><td class="n">Otos</td><td>Media partida</td><td>Revela y atraviesa muros ilusorios (necesario para los ídolos de Ailouros)</td></tr>
+          <tr><td class="n">Phos</td><td>Último, tramo final</td><td>Cierra los tipos de lore que faltan por leer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--marmol-tenue);margin-top:12px">Los cuatro restantes se otorgan en escena y no requieren desvío.</p>
+  </div>
+</section>
+
+<!-- ============ RUTA POR CAPÍTULOS ============ -->
+<section id="ruta">
+  <div class="contenedor">
+    <h2>Ruta capítulo por capítulo</h2>
+    <p class="intro">Los doce objetivos de La Búsqueda, en orden. Marca cada uno conforme lo termines y el tablero lleva la cuenta.</p>
+
+    <div class="tablero">
+      <span class="cifra" id="cifra">0 %</span>
+      <div class="riel"><i id="riel"></i></div>
+      <span style="font-size:13px;color:var(--marmol-tenue)" id="reloj">0 h de 11–13 h</span>
+      <button type="button" id="reiniciar">Reiniciar</button>
+    </div>
+
+    <details class="cap" data-pct="8" data-min="45">
+      <summary>
+        <span class="idx">01</span>
+        <span class="tit">La llamada de Esparta<small>Sparta Calls</small></span>
+        <span class="meta">8 %<em>40–50 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Río Eurotas y Esparta. El tutorial largo: lanza, escudo, esquiva y parada. Matas al primer Cíclope y le sacas el ojo.</p>
+        <ul>
+          <li>Konstantinos, el escultor, cierra la misión y te da el <strong>Busto de Licurgo</strong>.</li>
+          <li>Vuelve sobre tus pasos a la primera hoguera: en el altar de la sala derecha obtienes <strong>Skopos</strong>.</li>
+          <li>Arranca aquí <em>Nunca te atrapan robando</em> y <em>Las pertenencias de un chico</em>. No intentes cerrarlas: cuatro de los cinco cofres piden dones que aún no tienes.</li>
+          <li>Activa el Globo Bermellón de Esparta antes de irte.</li>
+        </ul>
+        <p><span class="etiqueta jefe">Jefe: Cíclope</span><span class="etiqueta">Río Eurotas</span><span class="etiqueta">Esparta</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="17" data-min="62">
+      <summary>
+        <span class="idx">02</span>
+        <span class="tit">El encargo del escultor<small>The Sculptor's Assignment</small></span>
+        <span class="meta">17 %<em>55–70 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>La Galería y los Bosques de Laconia. Vas por las herramientas robadas de Konstantinos y te topas con el primer templo.</p>
+        <ul>
+          <li><strong>Honda Solar</strong> en el Templo de Apolo. Deimos duda en tomarla; Kratos aplica la ley espartana.</li>
+          <li>Al salir del templo, tres varillas de techo bloquean la puerta: dale dos veces seguidas a cada una con la honda.</li>
+          <li>Abajo queda el <strong>Cruce del Olimpo (Templo de Apolo)</strong>, tu primer viaje rápido. Vas a agradecerlo mucho más tarde.</li>
+          <li>Nuevo peligro: la cicuta silbante suelta veneno que te drena el espíritu. Rompe la flor de lejos con la honda.</li>
+          <li>La Galería guarda 104 marcas de coleccionable, casi todas de <em>La inspiración del escultor</em>. Ignóralas por ahora.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Honda Solar</span><span class="etiqueta">La Galería</span><span class="etiqueta">Bosques de Laconia</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="26" data-min="62">
+      <summary>
+        <span class="idx">03</span>
+        <span class="tit">Un león perdido<small>A Lost Lion</small></span>
+        <span class="meta">26 %<em>55–70 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>La Gran Cisterna, bajo Esparta. Primera pelea con nombre propio y el don que más rutas viejas te va a abrir.</p>
+        <ul>
+          <li>Derrota a <strong>Ioke</strong> para entrar a la Cisterna.</li>
+          <li>Baja por el pozo del elevador hasta el fondo: ahí está el Templo de Hestia y la <strong>Llama Perenne</strong>.</li>
+          <li>Con ella quema los espinos que has ido viendo desde el capítulo 1. No regreses todavía: hazlo cuando tengas viaje rápido en más templos.</li>
+          <li>El Cruce del Olimpo del Templo de Hestia queda a la izquierda de la planta.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Llama Perenne</span><span class="etiqueta jefe">Jefe: Ioke</span><span class="etiqueta">La Gran Cisterna</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="33" data-min="52">
+      <summary>
+        <span class="idx">04</span>
+        <span class="tit">Preguntas sin respuesta<small>Unanswered Questions</small></span>
+        <span class="meta">33 %<em>45–60 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>El Santuario. Capítulo corto y muy guiado, con la primera mejora real de movilidad.</p>
+        <ul>
+          <li>De ida, el Templo de Nike está cerrado. Entra al Santuario, avanza la trama y al salir Eleonora ya te dejó el paso libre.</li>
+          <li><strong>Sandalias de la Victoria</strong> en el Templo de Nike.</li>
+          <li>El Santuario es donde después entregarás las tres plumas de Estinfálide para abrir las Cámaras de las Musas.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Sandalias de la Victoria</span><span class="etiqueta">El Santuario</span><span class="etiqueta">Templo de Nike</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="42" data-min="67">
+      <summary>
+        <span class="idx">05</span>
+        <span class="tit">La sombra del Taigeto<small>Shadow of Taygetos</small></span>
+        <span class="meta">42 %<em>60–75 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Monte Taigeto y el tramo largo del río Eurotas que desemboca en el Templo de Dioniso.</p>
+        <ul>
+          <li><strong>Olpe del Bienestar</strong>: tu frasco de curación. El círculo verde sobre la barra de vida indica cuánto queda.</li>
+          <li>A partir de aquí conviene pelear con la vida al tope siempre que puedas, porque los orbes verdes sobrantes rellenan el frasco.</li>
+          <li>Ya con Cruce del Olimpo en Nike, Apolo, Hestia y Dioniso, el viaje rápido empieza a valer la pena.</li>
+          <li>Primera Piña Divina en el río Eurotas, para la ofrenda a Dioniso.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Olpe del Bienestar</span><span class="etiqueta">Monte Taigeto</span><span class="etiqueta">Templo de Dioniso</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="51" data-min="67">
+      <summary>
+        <span class="idx">06</span>
+        <span class="tit">Obras inconclusas<small>Unfinished Works</small></span>
+        <span class="meta">51 %<em>60–75 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Regreso a los Bosques de Laconia y salto al Templo de Artemisa. El capítulo bisagra: sales de él con el kit casi completo.</p>
+        <ul>
+          <li>En los Bosques encuentras un <strong>Altar de Nike</strong> obligatorio: te da el <em>Paso Celestial</em>, la segunda versión de las sandalias.</li>
+          <li><strong>Hoja Lunar</strong> en el Templo de Artemisa. Tutorial corto, y abajo otro punto de viaje rápido.</li>
+          <li>Sales del templo directo al Paso de los Monumentos.</li>
+          <li>Con la Hoja Lunar ya puedes empujar columnas para alcanzar monumentos sagrados que estaban fuera de rango.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Hoja Lunar</span><span class="etiqueta don-e">Sandalias II</span><span class="etiqueta">Paso de los Monumentos</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="58" data-min="52">
+      <summary>
+        <span class="idx">07</span>
+        <span class="tit">Espíritus hundidos<small>Sunken Spirits</small></span>
+        <span class="meta">58 %<em>45–60 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Vuelven a la Gran Cisterna, pero a un sector que no habían pisado. Deimos insiste en que Vasilis tiene otro escondite ahí.</p>
+        <ul>
+          <li>Sección de columnas móviles: usa la Hoja Lunar para tirarlas sobre placas de presión.</li>
+          <li>Se abre el <strong>Ágora Sumergida</strong>, región pequeña pero con dos monumentos sagrados.</li>
+          <li>Es el mejor momento para volver a Esparta y cerrar los cofres de <em>Nunca te atrapan robando</em> que pedían Llama Perenne.</li>
+        </ul>
+        <p><span class="etiqueta">La Gran Cisterna</span><span class="etiqueta">Ágora Sumergida</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="67" data-min="62">
+      <summary>
+        <span class="idx">08</span>
+        <span class="tit">La tormenta que se forma<small>The Gathering Storm</small></span>
+        <span class="meta">67 %<em>55–70 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Templo de Deméter y Pantano Velado. Último don del juego.</p>
+        <ul>
+          <li><strong>Guadaña de la Cosecha</strong>. Tras el tutorial, baja la escalera por el Cofre Sanguíneo: el teletransportador de este templo está roto, no lo busques.</li>
+          <li>Nada más salir, a la izquierda, entra al Pantano Velado y guarda en la hoguera inmediata.</li>
+          <li>La guadaña atraviesa muros en el trayecto de vuelta. Apunta en diagonal y encadena tres raíces con un solo lanzamiento.</li>
+        </ul>
+        <p><span class="etiqueta don-e">Guadaña de la Cosecha</span><span class="etiqueta">Templo de Deméter</span><span class="etiqueta">Pantano Velado</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="78" data-min="67">
+      <summary>
+        <span class="idx">09</span>
+        <span class="tit">Terreno elevado<small>Higher Ground</small></span>
+        <span class="meta">78 %<em>60–75 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Segunda visita al Paso de los Monumentos y Puerto de Mesenia. El capítulo con el mejor jefe del juego.</p>
+        <ul>
+          <li>Buscas pruebas de que Vasilis practicaba arquería: el puesto de arquero está abajo a la izquierda, desde el camino sobre la estatua de la reina Esparta.</li>
+          <li>Aquí está el segundo <strong>Altar de Nike</strong>. Con las sandalias mejoradas por fin rompes las barreras del mundo y accedes a las grietas con racimos de cabezas de serpiente.</li>
+          <li>Te avisan de un grifo en el Puerto de Mesenia: es Adrastea. Rompe la barrera del centro y súbete a la torre del extremo izquierdo.</li>
+          <li>Tras la escena, en la base de la torre, arranca la pelea contra el <strong>Escolopendra</strong>, el bicho del logotipo de arranque.</li>
+        </ul>
+        <p><span class="etiqueta jefe">Jefe: Escolopendra</span><span class="etiqueta don-e">Sandalias III</span><span class="etiqueta">Puerto de Mesenia</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="86" data-min="57">
+      <summary>
+        <span class="idx">10</span>
+        <span class="tit">Manos sucias<small>Dirty Hands</small></span>
+        <span class="meta">86 %<em>50–65 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Viñedo de Eno y Huecos de Piedra. Empieza el tramo de construcción de personaje.</p>
+        <ul>
+          <li>Cerca del final de los Huecos de Piedra recibes el <strong>Cinturón de Tyche</strong>: dos ranuras para Gouri, los amuletos del juego.</li>
+          <li>Equipa la <em>Joya de Ziteo</em> en cuanto la tengas. Es la recomendación estándar y ahorra horas de farmeo después.</li>
+          <li>El Viñedo esconde a Alastor, el demonio de sangre y vino: se teletransporta y llena la pantalla de orbes rojos. Pega dos golpes y sal.</li>
+        </ul>
+        <p><span class="etiqueta">Viñedo de Eno</span><span class="etiqueta">Huecos de Piedra</span><span class="etiqueta">Cinturón de Tyche</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="94" data-min="62">
+      <summary>
+        <span class="idx">11</span>
+        <span class="tit">Con él o sobre él<small>With It or On It</small></span>
+        <span class="meta">94 %<em>55–70 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Fundición de la Invención, Estepa Árida y Pico Astillado. El juego deja de guiarte y empieza a exigirte todo lo aprendido.</p>
+        <ul>
+          <li>La Fundición es la región más densa en Cofres de Suministro (diez) y todos son alcanzables ya.</li>
+          <li>Segunda Piña Divina en el Pico Astillado: cuando Deimos comente que casi pueden cargar un cofre completo, en vez de ir a la derecha sube la escalera al Globo Bermellón.</li>
+          <li>El tercio final de la Estepa Árida queda cerrado hasta después de los créditos. No pierdas tiempo buscando la entrada.</li>
+        </ul>
+        <p><span class="etiqueta">Fundición de la Invención</span><span class="etiqueta">Estepa Árida</span><span class="etiqueta">Pico Astillado</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <details class="cap" data-pct="100" data-min="38">
+      <summary>
+        <span class="idx">12</span>
+        <span class="tit">Deberes de un espartano<small>A Spartan's Duties</small></span>
+        <span class="meta">100 %<em>30–45 min</em></span>
+      </summary>
+      <div class="cuerpo">
+        <p>Garganta de Viros, la última región. Sigues el rastro que dejó Vasilis y cierras la historia de los dos hermanos.</p>
+        <ul>
+          <li>Antes del descenso final recibes el <strong>Fragmento de Cráneo</strong>, moneda de cambio con los Kerkopes.</li>
+          <li>Al fondo del pozo hay una hoguera (Tierra Baja). Guarda ahí: es tu último punto seguro.</li>
+          <li>Tras los créditos vuelves al mundo libre con todo desbloqueado y con el tercio faltante de la Estepa Árida ya accesible.</li>
+        </ul>
+        <p><span class="etiqueta">Garganta de Viros</span><span class="etiqueta">Final</span></p>
+        <label class="marca"><input type="checkbox"> Capítulo completado</label>
+      </div>
+    </details>
+
+    <div class="nota">
+      El reparto de capítulos por región y los porcentajes son una estimación construida a partir de guías públicas y del orden real de desbloqueo de cada don. El juego no muestra un porcentaje de historia: su contador mide coleccionables sobre el total del mapa.
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESPUÉS DE LOS CRÉDITOS ============ -->
+<section id="postjuego">
+  <div class="contenedor">
+    <h2>Después de los créditos</h2>
+    <p class="intro">Terminar la historia te deja alrededor del 39 % del contador. Estas son las ocho a diez horas restantes, ordenadas por lo que más rinde.</p>
+
+    <div class="rejilla">
+      <div class="ficha">
+        <h4>Cámaras de las Musas</h4>
+        <p>Nueve retos detrás de tres puertas del Santuario. Se abren con las plumas de tres Estinfálides. Melete pone plataformas, Mneme herramientas y Aoede combate. Completarlas todas desbloquea la región secreta del <strong>Pináculo a la Deriva</strong>.</p>
+      </div>
+      <div class="ficha">
+        <h4>Las Pruebas de los Éforos</h4>
+        <p>Nueve desafíos en La Galería, el equivalente al Desafío de los Dioses. Cada uno se puntúa por tiempo y por dos restricciones de combate. Déjalos para el final: con el equipo completo caen casi solos.</p>
+      </div>
+      <div class="ficha">
+        <h4>Isla de Eea y Circe</h4>
+        <p>Se entra por el extremo suroeste del Puerto de Mesenia. Circe te fabrica Gouri a cambio de nueve Ídolos de Ailouros, escondidos tras muros ilusorios que solo Otos revela. Aquí está también el octavo poder del busto.</p>
+      </div>
+      <div class="ficha">
+        <h4>Isla de Citera</h4>
+        <p>Seis Keledones (lechuzas) atrapadas por sus Hermanas. Cada liberación abre un arco en la Puerta de las Lechuzas de la sala superior, con su propio lote de cofres. Trece Cofres Sanguíneos solo en esta región.</p>
+      </div>
+      <div class="ficha">
+        <h4>El Pozo</h4>
+        <p>Modo roguelite de final de juego, en solitario o a dos jugadores en pantalla partida. Se puede abrir antes de terminar la campaña con una secuencia estilo Konami en el menú de inicio, que arranca con Arriba, Arriba, Abajo, Abajo, Izquierda, Derecha.</p>
+      </div>
+      <div class="ficha">
+        <h4>Platino</h4>
+        <p>36 trofeos, dificultad 4/10, 20+ horas. Cero perdibles y cero online. Basta con llevar cada región al 100 %; los trofeos van cayendo en el camino.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIEMPOS ============ -->
+<section id="tiempos">
+  <div class="contenedor">
+    <h2>Cuánto te va a llevar</h2>
+    <p class="intro">Cifras de jugadores reales tras el lanzamiento, no del arranque del juego.</p>
+
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Forma de jugarlo</th><th>Tiempo</th><th>Contador del juego</th></tr></thead>
+        <tbody>
+          <tr><td>Directo a los créditos, con experiencia en metroidvanias</td><td class="n">11–13 h</td><td class="n">~35 %</td></tr>
+          <tr><td>Ritmo normal, recogiendo lo que aparece de paso</td><td class="n">~18 h</td><td class="n">~39 %</td></tr>
+          <tr><td>Todo el mapa y el platino</td><td class="n">20–22 h</td><td class="n">100 %</td></tr>
+          <tr><td>El Pozo aparte, hasta donde aguantes</td><td class="n">abierto</td><td class="n">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Reparto de los 594 coleccionables</h3>
+    <div class="tabla-envoltura">
+      <table>
+        <thead><tr><th>Tipo</th><th>Total</th><th>Tipo</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td>Inspiración del escultor</td><td class="n">92</td><td>Cofres de Suministro</td><td class="n">73</td></tr>
+          <tr><td>Cofres Sanguíneos</td><td class="n">68</td><td>Campamentos</td><td class="n">49</td></tr>
+          <tr><td>Colección de Conocimiento</td><td class="n">37</td><td>Lore</td><td class="n">32</td></tr>
+          <tr><td>Artefactos</td><td class="n">30</td><td>Olivos Sagrados</td><td class="n">27</td></tr>
+          <tr><td>Depósitos de Armería</td><td class="n">21</td><td>Monumentos Sagrados</td><td class="n">20</td></tr>
+          <tr><td>Globos Bermellón</td><td class="n">18</td><td>Cajas de Hierro</td><td class="n">15</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--marmol-tenue);margin-top:12px">Los campamentos son el único tipo que no cuenta para ningún trofeo.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor">
+    <h3 style="margin-top:0">Fuentes</h3>
+    <ul>
+      <li><a href="https://blog.latam.playstation.com/2026/02/13/god-of-war-sons-of-sparta-ya-esta-disponible-en-ps5/">PlayStation.Blog LATAM — presentación oficial del juego</a></li>
+      <li><a href="https://www.3djuegos.com/juegos/god-of-war-sons-of-sparta/">3DJuegos — ficha, análisis y noticias en español</a></li>
+      <li><a href="https://www.powerpyx.com/god-of-war-sons-of-sparta-collectibles-guide-100-completion/">PowerPyx — coleccionables por región y 100 %</a></li>
+      <li><a href="https://www.powerpyx.com/god-of-war-sons-of-sparta-trophy-guide-roadmap/">PowerPyx — guía de trofeos y hoja de ruta</a></li>
+      <li><a href="https://psnprofiles.com/guide/24525-god-of-war-sons-of-sparta-platinum-walkthrough">PSNProfiles — walkthrough de platino</a></li>
+      <li><a href="https://godofwar.fandom.com/wiki/Goals_(Sons_of_Sparta)">God of War Wiki — lista completa de objetivos</a></li>
+      <li><a href="https://www.gamerguides.com/god-of-war-sons-of-sparta/maps/laconia">Gamer Guides — mapa interactivo de Laconia</a></li>
+    </ul>
+    <p style="margin-top:26px">Guía no oficial. God of War y Sons of Sparta son marcas de Sony Interactive Entertainment. Los tiempos y porcentajes por capítulo son estimaciones.</p>
+  </div>
+</footer>
+
+</div><!-- /capa -->
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- barra de lectura ---------- */
+  var barra = document.getElementById('barraAvance');
+  function pintarBarra(){
+    var alto = document.documentElement.scrollHeight - window.innerHeight;
+    var p = alto > 0 ? (window.scrollY / alto) * 100 : 0;
+    barra.style.width = Math.min(100, p) + '%';
+  }
+  window.addEventListener('scroll', pintarBarra, {passive:true});
+  window.addEventListener('resize', pintarBarra);
+  pintarBarra();
+
+  /* ---------- tablero de capítulos ---------- */
+  var caps    = Array.prototype.slice.call(document.querySelectorAll('.cap'));
+  var cifra   = document.getElementById('cifra');
+  var riel    = document.getElementById('riel');
+  var reloj   = document.getElementById('reloj');
+  var CLAVE   = 'sos-avance-v1';
+
+  function guardar(estado){
+    try { localStorage.setItem(CLAVE, JSON.stringify(estado)); } catch(e){}
+  }
+  function leer(){
+    try { return JSON.parse(localStorage.getItem(CLAVE)) || []; } catch(e){ return []; }
+  }
+
+  function recalcular(){
+    var pct = 0, min = 0, estado = [];
+    caps.forEach(function(cap, i){
+      var casilla = cap.querySelector('input');
+      estado[i] = casilla.checked;
+      if (casilla.checked){
+        pct = Math.max(pct, parseInt(cap.dataset.pct, 10));
+        min += parseInt(cap.dataset.min, 10);
+      }
+    });
+    cifra.textContent = pct + ' %';
+    riel.style.width = pct + '%';
+    var horas = Math.floor(min / 60), mins = min % 60;
+    reloj.textContent = (min === 0 ? '0 h' : horas + ' h ' + (mins ? mins + ' min' : '')) + ' de 11–13 h';
+    guardar(estado);
+  }
+
+  var previo = leer();
+  caps.forEach(function(cap, i){
+    var casilla = cap.querySelector('input');
+    if (previo[i]) casilla.checked = true;
+    casilla.addEventListener('change', recalcular);
+  });
+  document.getElementById('reiniciar').addEventListener('click', function(){
+    caps.forEach(function(cap){ cap.querySelector('input').checked = false; });
+    recalcular();
+  });
+  recalcular();
+
+  /* ---------- orbes ---------- */
+  var reducido = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reducido.matches) return;
+
+  var lienzo = document.getElementById('orbes');
+  var ctx = lienzo.getContext('2d');
+  var colores = ['#E0374A','#3FA9F5','#F5C542','#4CC26B'];
+  var pesos   = [0.42, 0.20, 0.22, 0.16];   // los rojos dominan, como en el juego
+  var orbes = [], ancho = 0, alto = 0, dpr = 1, corriendo = true;
+
+  function elegirColor(){
+    var r = Math.random(), acc = 0;
+    for (var i = 0; i < pesos.length; i++){
+      acc += pesos[i];
+      if (r <= acc) return colores[i];
+    }
+    return colores[0];
+  }
+
+  function nuevoOrbe(y){
+    return {
+      x: Math.random() * ancho,
+      y: y === undefined ? alto + Math.random() * alto : y,
+      r: 1.1 + Math.random() * 2.9,
+      vy: 0.13 + Math.random() * 0.42,
+      vx: (Math.random() - 0.5) * 0.22,
+      fase: Math.random() * Math.PI * 2,
+      vel: 0.006 + Math.random() * 0.014,
+      alfa: 0.24 + Math.random() * 0.5,
+      color: elegirColor()
+    };
+  }
+
+  function medir(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    ancho = window.innerWidth;
+    alto  = window.innerHeight;
+    lienzo.width  = Math.floor(ancho * dpr);
+    lienzo.height = Math.floor(alto * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    var objetivo = ancho < 640 ? 26 : (ancho < 1100 ? 40 : 58);
+    orbes = [];
+    for (var i = 0; i < objetivo; i++) orbes.push(nuevoOrbe(Math.random() * alto));
+  }
+
+  function dibujar(){
+    if (!corriendo) return;
+    ctx.clearRect(0, 0, ancho, alto);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = 0; i < orbes.length; i++){
+      var o = orbes[i];
+      o.y -= o.vy;
+      o.fase += o.vel;
+      o.x += o.vx + Math.sin(o.fase) * 0.24;
+
+      if (o.y < -12 || o.x < -30 || o.x > ancho + 30){
+        orbes[i] = nuevoOrbe(alto + 12);
+        continue;
+      }
+
+      var pulso = 0.72 + Math.sin(o.fase * 1.7) * 0.28;
+      var halo = ctx.createRadialGradient(o.x, o.y, 0, o.x, o.y, o.r * 6.5);
+      halo.addColorStop(0, o.color);
+      halo.addColorStop(0.28, o.color + '66');
+      halo.addColorStop(1, 'rgba(0,0,0,0)');
+
+      ctx.globalAlpha = o.alfa * pulso * 0.55;
+      ctx.fillStyle = halo;
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, o.r * 6.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.globalAlpha = Math.min(1, o.alfa * pulso + 0.2);
+      ctx.fillStyle = o.color;
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, o.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+    requestAnimationFrame(dibujar);
+  }
+
+  var temporizador;
+  window.addEventListener('resize', function(){
+    clearTimeout(temporizador);
+    temporizador = setTimeout(medir, 180);
+  });
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden){ corriendo = false; }
+    else if (!corriendo){ corriendo = true; requestAnimationFrame(dibujar); }
+  });
+  reducido.addEventListener && reducido.addEventListener('change', function(e){
+    if (e.matches){ corriendo = false; ctx.clearRect(0,0,ancho,alto); }
+  });
+
+  medir();
+  requestAnimationFrame(dibujar);
+})();
+</script>
+</body>
+</html>
